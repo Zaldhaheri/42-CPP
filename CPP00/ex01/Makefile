@@ -1,10 +1,10 @@
 NAME = AwesomePhoneBook
 
-SRC = Contact.cpp PhoneBook
+SRC = Contact.cpp PhoneBook.cpp main.cpp
 OBJ = ${SRC:.cpp=.o}
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -std=c++98 -m64
 
 all: $(NAME)
 
