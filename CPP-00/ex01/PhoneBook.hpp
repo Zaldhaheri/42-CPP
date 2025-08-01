@@ -1,27 +1,48 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: zaldhahe <zaldhahe@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 14:46:43 by zaldhahe          #+#    #+#             */
-/*   Updated: 2024/12/19 16:52:52 by zaldhahe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-#include "Contact.hpp"
 #include <iostream>
+#include <iomanip>
+#include <string>
 
-class PhoneBook
+class Contact 
 {
-    private:
-        int count;
-        Contact _contact[8];
-    public:
-        PhoneBook();
-        ~PhoneBook();
-        void ADD(Contact contact);
-        void SEARCH();
-        void EXIT();
+	private:
+	std::string _fname;
+	std::string _lname;
+	std::string _nickname;
+	std::string _phone;
+	std::string _secret;
+
+	public:
+	Contact(void);
+	~Contact(void);
+
+	void		setFname(const std::string &fname) { _fname = fname; };
+	std::string	getFname(void) const { return _fname; };
+	void		setLname(const std::string &lname) { _lname = lname; };
+	std::string	getLname(void) const { return _lname; };
+	void		setNickname(const std::string &nickname) { _nickname = nickname; };
+	std::string	getNickname(void) const { return _nickname; };
+	void		setPhone(const std::string &phone) { _phone = phone; };
+	std::string	getPhone(void) const { return _phone; };
+	void		setSecret(const std::string &secret) { _secret = secret; };
+	std::string	getSecret(void) const { return _secret; };
+
+
 };
+
+class Phonebook
+{
+	private:
+	Contact _contacts[8];
+	int _index;
+	int _count;
+
+	public:
+	Phonebook(void);
+	~Phonebook(void);
+
+	void print_phonebook() const;
+};
+#endif

@@ -1,35 +1,20 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: zaldhahe <zaldhahe@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 14:21:47 by zaldhahe          #+#    #+#             */
-/*   Updated: 2024/12/19 16:39:03 by zaldhahe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "phonebook.hpp"
 
-#include "PhoneBook.hpp"
+Phonebook::Phonebook () : _index(0), _count(0) {
+    std::cout <<"Construct Phonebook\n";
+}
 
-PhoneBook::PhoneBook(void) : count(0)
+Phonebook::~Phonebook()
 {
-	return ;
+    std::cout << "Destruct Phonebook\n";
 }
 
-PhoneBook::~PhoneBook(void)
+Contact::Contact()
 {
-	return ;
+    std::cout << "Construct Contact\n";
 }
 
-void PhoneBook::ADD(Contact contact)
-{	
-	_contact[count] = contact;
-	count = (count + 1) % 8;
+Contact::~Contact()
+{
+    std::cout << "Destruct Contact\n";
 }
-
-void PhoneBook::SEARCH()
-{}
-
-void PhoneBook::EXIT()
-{}
