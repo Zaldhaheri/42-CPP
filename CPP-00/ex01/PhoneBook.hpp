@@ -35,14 +35,15 @@ class Contact
 class Phonebook
 {
 	private:
-	Contact _contacts[8];
+	Contact contacts[8];
 	int _index;
 	int _count;
 
 	public:
 	Phonebook(void);
 	~Phonebook(void);
-
-	void print_phonebook() const;
+	void add_contact(std::string data[5]);
+	int display_phonebook();
+	int display_contact(std::string index);
 };
 #endif
