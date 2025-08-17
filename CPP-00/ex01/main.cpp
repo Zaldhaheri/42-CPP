@@ -18,9 +18,15 @@ int main()
     std::string input;
     std::string inputs[5];
 
+    
     while (1)
-    {
-        std::cout << " (ADD)-add new contact ; (SEARCH)-contact lookup ; (EXIT)-close program\n";
+    {   
+        std::cout << BLACK << "+========================================================================+" << RESET << std::endl;
+        std::cout << BLACK << "+======================  "<< CYAN BOLD ITALIC << "PHONEBOOK MAIN MENU" << BLACK UNBOLD << "  ===========================+" << RESET << std::endl;
+        std::cout << BLACK << "+========================================================================+" << RESET << std::endl;
+        std::cout << CYAN << "+ (" << GREEN << "ADD" << CYAN << ")-add new contact ; (" << GREEN <<
+                        "SEARCH" << CYAN << ")-contact lookup ; (" << GREEN << "EXIT" << CYAN << ")-close program +" << RESET << std::endl;
+        std::cout << "+ Select Option: ";
         std::getline(std::cin, input);
         if (input == "ADD")
         {

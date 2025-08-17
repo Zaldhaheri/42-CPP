@@ -1,13 +1,8 @@
 #include "phonebook.hpp"
 
-Phonebook::Phonebook () : _index(0), _count(0) {
-	std::cout <<"Construct Phonebook\n";
-}
+Phonebook::Phonebook () : _index(0), _count(0) {}
 
-Phonebook::~Phonebook()
-{
-	std::cout << "Destruct Phonebook\n";
-}
+Phonebook::~Phonebook() {}
 
 void Phonebook::add_contact(std::string data[5])
 {
@@ -72,12 +67,6 @@ int Phonebook::display_contact(std::string index)
 	return (1);
 }
 
-Contact::Contact()
-{
-	std::cout << "Construct Contact\n";
-}
+Contact::Contact() {}
 
-Contact::~Contact()
-{
-	std::cout << "Destruct Contact\n";
-}
+Contact::~Contact() {}
