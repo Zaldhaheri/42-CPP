@@ -12,7 +12,7 @@
 
 NAME = account
 
-SRC = Account.cpp, tests.cpp
+SRC = Account.cpp tests.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -31,7 +31,7 @@ clean :
 	rm -f $(OBJ)
 
 fclean : clean
-	rn -f $(NAME)
+	rm -f $(NAME)
 
 re : fclean all
 
