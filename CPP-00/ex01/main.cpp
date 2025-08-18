@@ -30,28 +30,26 @@ int main()
         std::getline(std::cin, input);
         if (input == "ADD")
         {
-            std::cout << "ADD chosen\n";
-            std::cout << "First name: ";
+            std::cout << BLUE BOLD << "First name: ";
             std::getline(std::cin, inputs[0]);
-            std::cout << "Last name: ";
+            std::cout << WHITE <<"Last name: ";
             std::getline(std::cin, inputs[1]);
-            std::cout << "Nickname: ";
+            std::cout << BLUE << "Nickname: ";
             std::getline(std::cin, inputs[2]);
-            std::cout << "Phone number: ";
+            std::cout << WHITE <<"Phone number: ";
             std::getline(std::cin, inputs[3]);
-            std::cout << "Secret: ";
+            std::cout << BLUE <<"Secret: ";
             std::getline(std::cin, inputs[4]);
             phonebook.add_contact(inputs);
-            std::cout << "Contact " + inputs[0] + " " + inputs[1] + " Added!\n";
+            std::cout << UNBOLD ITALIC GREEN << "Contact " + inputs[0] + " " + inputs[1] + " Added!\n";
         }
         else if (input == "SEARCH")
         {
-            std::cout << "SEARCH chosen\n";
             std::cout << "Select contact index to expand\n";
             if (!phonebook.display_phonebook())
                 continue;
             do {
-                std::cout << "Index: ";
+                std::cout << CYAN << "Index: " << RESET;
                 std::getline(std::cin, input);
                 if (!phonebook.display_contact(input))
                     std::cout << "Invalid index\n";
@@ -60,11 +58,8 @@ int main()
             } while (1);
         }
         else if (input == "EXIT")
-        {
-            std::cout << "EXIT chosen\n";
             break;
-        }
         else
-            std::cout << "The option " << input << " is invalid\n";
+            std::cout << RED  BOLD << "The option " << input << " is invalid\n" << RESET UNBOLD;
     }
 }
