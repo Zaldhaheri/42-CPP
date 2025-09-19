@@ -1,26 +1,26 @@
-NAME = sed
+NAME := harl
 
-SRC = src/main.cpp src/Harl.cpp
+SRC := src/main.cpp src/Harl.cpp
+OBJ := $(SRC:.cpp=.o)
 
-OBJ = $(SRC:.cpp=.o)
+CXX := c++
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98
+CPPFLAGS := -Iinc
 
-CPP = c++
+all: $(NAME)
 
-CFLAG = -Wall -Werror -Wextra -std=c++98
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 
-COMPILE = $(CPP) $(CFLAG)
+src/%.o: src/%.cpp
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 
-all : $(NAME)
-
-$(NAME) : $(OBJ)
-	$(COMPILE) $(OBJ) -o $(NAME)
-
-clean :
+clean:
 	rm -f $(OBJ)
 
-fclean : clean
+fclean: clean
 	rm -f $(NAME)
 
-re : fclean all
+re: fclean all
 
-.PHONY : all clean fclean re
+.PHONY: all clean fclean re
