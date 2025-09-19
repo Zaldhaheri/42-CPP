@@ -21,29 +21,32 @@ int main(int argc, char **argv)
         std::cout << "Error: Invalid Argument count. \nUsage: ./replace <filename> <string1> <string2>" << std::endl;
         return (1);
     }
-    else
-    {
-        const std::string filename = argv[1];
-        const std::string s1 = argv[2];
-        const std::string s2 = argv[3];
-        
-        std::string buffer;
-        std::ifstream inputfile;
-        std::ofstream outputfile;
+    const std::string filename = argv[1];
+    const std::string s1 = argv[2];
+    const std::string s2 = argv[3];
+    std::string buffer;
+    std::ifstream inputfile;
+    std::ofstream outputfile;
 
-        inputfile.open(filename);
-        if (!inputfile.is_open())
-        {
-            std::cout << "Error: Could not open file " << filename << std::endl;
-            return (1);
-        }
-        else
-        {
-            while(std::getline(inputfile, buffer))
-            {
-                buffer = ft_replace(buffer, s1, s2);
-                std::cout << buffer << std::endl;
-            }
-        }
-    }  
+    inputfile.open(filename);
+    if (!inputfile.is_open())
+    {
+        std::cout << "Error: Could not open file " << filename << std::endl;
+        return (1);
+    }
+    outputfile.open(filename + ".replace");
+    if (!outputfile.is_open())
+    {
+        std::cout << "Error: Could not create output file " << filename + ".replace" << std::endl;
+        inputfile.close();
+        return (1);
+    }
+    while(std::getline(inputfile, buffer))
+    {
+        buffer = ft_replace(buffer, s1, s2);
+        outputfile << buffer << std::endl;
+    }
+    inputfile.close();
+    outputfile.close();
+    return (0);
 }

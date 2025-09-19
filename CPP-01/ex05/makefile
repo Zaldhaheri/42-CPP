@@ -1,6 +1,6 @@
-NAME = weapon
+NAME = sed
 
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC = src/main.cpp src/Harl.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

@@ -1,6 +1,12 @@
 #include "Weapon.hpp"
 
 Weapon::Weapon()
+: _type("None")
+{
+}
+
+Weapon::Weapon(const string& type)
+: _type(type)
 {
 }
 
@@ -8,8 +14,13 @@ Weapon::~Weapon()
 {
 }
 
-string Weapon::getType()
+void Weapon::setType(const string &type)
 {
-    return type;
+    _type = type;
+}
+
+string Weapon::getType() const
+{
+    return _type;
 }
 
