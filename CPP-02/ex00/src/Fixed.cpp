@@ -1,4 +1,4 @@
-#include "Fixed.hpp"
+#include "../inc/Fixed.hpp"
 
 const int Fixed::fractBits = 8;
 
@@ -8,7 +8,7 @@ Fixed::Fixed()
     std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed(Fixed &a)
+Fixed::Fixed(const Fixed &a)
 {
     *this = a;
     std::cout << "Copy constructor called\n";
@@ -19,7 +19,7 @@ Fixed::~Fixed()
     std::cout << "Destructor called\n";
 }
 
-Fixed& Fixed::operator=(const Fixed &a)
+Fixed &Fixed::operator=(const Fixed &a)
 {
     if (this != &a)
         fixedPointValue = a.getRawBits();
