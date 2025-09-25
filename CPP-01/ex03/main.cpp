@@ -8,7 +8,7 @@ int main()
 
         HumanA bob("Bob", club);
         bob.attack();
-        club.setType("some other type of club");
+        club.setType("blunt heavy club");
         bob.attack();
     }
     {
@@ -17,7 +17,7 @@ int main()
         HumanB jim("Jim");
         jim.setWeapon(club);
         jim.attack();
-        club.setType("some other type of club");
+        club.setType("toy balloon club");
         jim.attack();
     }
 }

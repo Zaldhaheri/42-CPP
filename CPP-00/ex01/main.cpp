@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zaldhahe <zaldhahe@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 20:10:49 by marvin            #+#    #+#             */
-/*   Updated: 2025/07/17 20:10:49 by marvin           ###   ########.fr       */
+/*   Created: 2025/09/18 16:56:14 by zaldhahe          #+#    #+#             */
+/*   Updated: 2025/09/18 16:56:14 by zaldhahe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 int main()
 {
@@ -61,5 +61,6 @@ int main()
             break;
         else
             std::cout << RED  BOLD << "The option " << input << " is invalid\n" << RESET UNBOLD;
+        std::cout << "\n\n\n";
     }
 }

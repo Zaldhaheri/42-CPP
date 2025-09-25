@@ -1,4 +1,4 @@
-#include "harl.hpp"
+#include "Harl.hpp"
 
 int main()
 {
@@ -17,6 +17,7 @@ int main()
         std::cout << "Input: ";
         std::cin >> input;
         harl.complain(input);
+        i++;
     }
     return 0;
 }

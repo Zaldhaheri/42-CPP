@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zaldhahe <zaldhahe@student.42.fr>          +#+  +:+       +#+         #
+#    By: zaldhahe <zaldhahe@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/19 12:41:14 by zaldhahe          #+#    #+#              #
-#    Updated: 2024/12/19 14:22:47 by zaldhahe         ###   ########.fr        #
+#    Created: 2025/09/18 16:56:21 by zaldhahe          #+#    #+#              #
+#    Updated: 2025/09/18 16:56:21 by zaldhahe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-SRC = main.cpp phonebook.cpp
+SRC = main.cpp PhoneBook.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

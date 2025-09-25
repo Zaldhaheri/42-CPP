@@ -8,7 +8,7 @@ class HumanB
         HumanB();
         HumanB(string name);
         ~HumanB();
-        void attack();
+        void attack() const;
         void setWeapon(Weapon &weapon);
     private:
         string _name;

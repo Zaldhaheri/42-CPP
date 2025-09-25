@@ -9,9 +9,10 @@ _weapon(weapon)
 
 HumanA::~HumanA()
 {
+    std::cout << _name << " died honorably in battle\n";
 }
 
-void HumanA::attack()
+void HumanA::attack() const
 {
     std::cout << _name << " attacks with their " << _weapon.getType() << "\n";
 }

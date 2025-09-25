@@ -1,7 +1,8 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(void)
+Zombie::Zombie(void): _name("... I forgot...")
 {
+    std::cout << "I just turned into a zombie, my name is " << _name << "\n";
 }
 
 Zombie::~Zombie(void)
@@ -17,4 +18,5 @@ void Zombie::announce(void) const
 void Zombie::setName(str name)
 {
     _name = name;
+    std::cout << "I remember... my name is " << _name << "\n";
 }

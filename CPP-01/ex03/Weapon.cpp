@@ -5,21 +5,24 @@ Weapon::Weapon()
 {
 }
 
-Weapon::Weapon(const string& type)
+Weapon::Weapon(const string &type)
 : _type(type)
 {
 }
 
 Weapon::~Weapon()
 {
+    std::cout << "The " << this->getType() << " got destroyed in battle\n";
 }
 
 void Weapon::setType(const string &type)
 {
+    std::cout << "The " << this->getType() << " transformed into a ";
     _type = type;
+    std::cout << this->getType() << "\n";
 }
 
-string Weapon::getType() const
+const string &Weapon::getType() const
 {
     return _type;
 }

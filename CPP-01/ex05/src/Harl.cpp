@@ -2,10 +2,12 @@
 
 Harl::Harl()
 {
+    std::cout << "Hello I'm harl i like to complain alot\n";
 }
 
 Harl::~Harl()
 {
+    std::cout << "Ok no more complaining, goodbye world\n";
 }
 
 void Harl::debug()

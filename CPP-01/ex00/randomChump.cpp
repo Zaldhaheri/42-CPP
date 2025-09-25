@@ -2,6 +2,6 @@
 
 void randomChump(str name)
 {
-    Zombie *z = new Zombie(name);
-    z->announce();
+    Zombie z(name);
+    z.announce();
 }
