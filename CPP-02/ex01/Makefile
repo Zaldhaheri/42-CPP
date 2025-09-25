@@ -1,6 +1,6 @@
-NAME := harl
+NAME := fixed
 
-SRC := src/main.cpp src/Harl.cpp
+SRC := src/main.cpp src/Fixed.cpp
 OBJ := $(SRC:.cpp=.o)
 
 CXX := c++
