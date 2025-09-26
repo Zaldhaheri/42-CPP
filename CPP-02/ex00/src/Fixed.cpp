@@ -2,15 +2,13 @@
 
 const int Fixed::fractBits = 8;
 
-Fixed::Fixed()
+Fixed::Fixed() : fixedPointValue(0)
 {
-    fixedPointValue = 0;
     std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed(const Fixed &a)
+Fixed::Fixed(const Fixed &a) : fixedPointValue(a.fixedPointValue)
 {
-    *this = a;
     std::cout << "Copy constructor called\n";
 }
 

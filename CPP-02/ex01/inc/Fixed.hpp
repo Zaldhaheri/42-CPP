@@ -9,11 +9,11 @@ class Fixed
         int fixedPointValue;
         static const int fractBits = 8;
     public:
-        Fixed();
+        Fixed(void);
         Fixed(const int num);
         Fixed(const float num);
         Fixed(const Fixed &a);
-        ~Fixed();
+        ~Fixed(void);
         Fixed &operator=(const Fixed &a);
         int getRawBits(void) const;
         void setRawBits(int const raw);

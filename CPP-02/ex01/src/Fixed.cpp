@@ -8,7 +8,7 @@ Fixed::Fixed() : fixedPointValue(0)
 
 Fixed::Fixed(const Fixed &a)
 {
-    *this = a;
+    fixedPointValue = a.fixedPointValue;
     std::cout << "Copy constructor called\n";
 }
 
