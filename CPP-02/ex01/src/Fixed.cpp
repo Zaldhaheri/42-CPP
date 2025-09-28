@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaldhahe <zaldhahe@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/28 15:49:01 by zaldhahe          #+#    #+#             */
+/*   Updated: 2025/09/28 15:49:01 by zaldhahe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/Fixed.hpp"
 #include <cmath>
 
@@ -8,7 +20,7 @@ Fixed::Fixed() : fixedPointValue(0)
 
 Fixed::Fixed(const Fixed &a)
 {
-    fixedPointValue = a.fixedPointValue;
+    *this = a;
     std::cout << "Copy constructor called\n";
 }
 
