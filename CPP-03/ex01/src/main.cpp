@@ -1,0 +1,40 @@
+#include "../inc/ScavTrap.hpp"
+
+int main()
+{
+    ClapTrap a;
+    ClapTrap b("Zayed");
+    ScavTrap s("Saeed");
+
+    std::cout << std::endl;
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.attack("Rashed");
+    a.beRepaired(1);
+
+    std::cout << std::endl;
+    b.attack("Abdulla");
+    b.takeDamage(9);
+    b.beRepaired(10);
+
+    std::cout << std::endl;
+    ClapTrap c(b);
+    c.attack("John Cena");
+    b.takeDamage(10);
+    b.beRepaired(2);
+    c.beRepaired(2);
+
+    std::cout << std::endl;
+    s.attack("Hamad");
+    s.takeDamage(20);
+    s.beRepaired(10);
+    s.guardGate();
+}
