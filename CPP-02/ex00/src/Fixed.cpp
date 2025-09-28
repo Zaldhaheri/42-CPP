@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaldhahe <zaldhahe@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/28 15:48:49 by zaldhahe          #+#    #+#             */
+/*   Updated: 2025/09/28 15:48:49 by zaldhahe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/Fixed.hpp"
 
 const int Fixed::fractBits = 8;
@@ -7,8 +19,9 @@ Fixed::Fixed() : fixedPointValue(0)
     std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed(const Fixed &a) : fixedPointValue(a.fixedPointValue)
+Fixed::Fixed(const Fixed &a)
 {
+    *this = a;
     std::cout << "Copy constructor called\n";
 }
 
