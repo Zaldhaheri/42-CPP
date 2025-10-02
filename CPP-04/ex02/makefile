@@ -1,6 +1,6 @@
 NAME := animal
 
-SRC := src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp
+SRC := src/main.cpp src/Animal.cpp src/Brain.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp
 OBJ := $(SRC:.cpp=.o)
 
 CXX := c++

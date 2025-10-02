@@ -33,7 +33,6 @@ Animal &Animal::operator=(const Animal &a)
 
 void Animal::makeSound() const
 {
-    std::cout << "Animal Sound" << std::endl;
 }
 
 void Animal::setType(const string type)
