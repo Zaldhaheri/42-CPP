@@ -1,72 +1,40 @@
 #include "../inc/Bureaucrat.hpp"
+#include "../inc/AForm.hpp"
+#include "../inc/PresidentialPardonForm.hpp"
+#include "../inc/ShrubberyCreationForm.hpp"
+#include "../inc/RobotomyRequestForm.hpp"
 
 int main()
 {
-    std::cout << std::endl << "---TEST 1 Increment Grade---" << std::endl;
-    try {
-        Bureaucrat a("Alice", 2);
-        std::cout << a << std::endl;
-        a.incrementGrade();
-        std::cout << a << std::endl;
-        a.incrementGrade();
-        std::cout << a << std::endl;
-        a.incrementGrade();
-        std::cout << a << std::endl;
-    } catch (const std::exception &e) {
-        std::cerr << "exception: " << e.what() << std::endl;
-    }
+    Bureaucrat bob("Bob", 1);
+    Bureaucrat jim("Jim", 150);
+    Bureaucrat alice("Alice", 25);
 
-    std::cout << std::endl << "---TEST 2 Decrement Grade---" << std::endl;
-    try {
-        Bureaucrat b("Bob", 149);
-        std::cout << b << std::endl;
-        b.decrementGrade();
-        std::cout << b << std::endl;
-        b.decrementGrade();
-        std::cout << b << std::endl;
-        b.decrementGrade();
-        std::cout << b << std::endl;
-    } catch (const std::exception &e) {
-        std::cerr << "exception: " << e.what() << std::endl;
-    }
+    AForm *form1 = new ShrubberyCreationForm(alice);
+    AForm *form2 = new RobotomyRequestForm(alice);
+    AForm *form3 = new PresidentialPardonForm(bob);
 
-    std::cout << std::endl << "---TEST 3 Invalid Grade on Creation---" << std::endl;
-    try {
-        Bureaucrat c("Charlie", 0);
-        std::cout << c << std::endl;
-    } catch (const std::exception &e) {
-        std::cerr << "exception: " << e.what() << std::endl;
-    }
+    std::cout << *form1 << std::endl;
+    std::cout << *form2 << std::endl;
+    std::cout << *form3 << std::endl;
 
-    try {
-        Bureaucrat d("David", 151);
-        std::cout << d << std::endl;
-    } catch (const std::exception &e) {
-        std::cerr << "exception: " << e.what() << std::endl;
-    }
+    std::cout << std::endl;
+    jim.signForm(*form1);
+    jim.executeForm(*form1);
+    std::cout << std::endl;
+    alice.signForm(*form1);
+    alice.executeForm(*form1);
+    
+    std::cout << std::endl;
+    jim.signForm(*form2);
+    alice.signForm(*form2);
+    alice.executeForm(*form2);
 
-    std::cout << std::endl << "---TEST 4 Forms---" << std::endl;
-    try {
-        Bureaucrat e("Eve", 50);
-        Bureaucrat f("Frank", 60);
-        Bureaucrat g("Grace", 150);
-        std::cout << e << std::endl;
-        std::cout << f << std::endl;
-        std::cout << g << std::endl;
-        Form f1("Form1", 45, 100);
-        Form f2("Form2", 55, 100);
-        Form f3("Form3", 150, 100);
-        std::cout << f1 << std::endl;
-        std::cout << f2 << std::endl;
-        std::cout << f3 << std::endl; 
-        e.signForm(f1);
-        e.signForm(f2);
-        g.signForm(f3);
-        f.signForm(f2);
-        e.signForm(f2);
-    } catch (const std::exception &e) {
-        std::cerr << "exception: " << e.what() << std::endl;
-    }
+    std::cout << std::endl;
+    alice.signForm(*form3);
+    alice.executeForm(*form3);
+    bob.signForm(*form3);
+    bob.executeForm(*form3);
 
     return 0;
 }

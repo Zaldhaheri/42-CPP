@@ -6,17 +6,16 @@
 class PresidentialPardonForm : public AForm
 {
     private :
-        Bureaucrat &b;
+        Bureaucrat &_b;
     
     public :
         PresidentialPardonForm(Bureaucrat &b);
         PresidentialPardonForm(PresidentialPardonForm const &p);
         ~PresidentialPardonForm();
     
-        PresidentialPardonForm & operator=(PresidentialPardonForm const &rSym);
+        PresidentialPardonForm &operator=(PresidentialPardonForm const &rSym);
 
-        void beSigned(Bureaucrat &b);
-        void execute(Bureaucrat &b) const;
+        void execute(Bureaucrat const &b) const;
 };
 
 std::ostream &operator<<(std::ostream & o, PresidentialPardonForm const &rSym);
